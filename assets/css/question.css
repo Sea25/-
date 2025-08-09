@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.mood-options {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.mood-card {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.mood-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.mood-card:hover {
+    transform: scale(1.05);
+    background: #ffe1f0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .mood-card {
+    border: 2px solid #ff7eb3;
+    background: #fff0f6;
+}
+
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff7eb3;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #ff4f92;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

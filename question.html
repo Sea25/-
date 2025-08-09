@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Selector</title>
+    <link rel="stylesheet" href="assets/css/question.css">
+</head>
+<body>
+    <div class="container">
+        <h1>What's Your Mood? 🎭</h1>
+        <form id="moodForm">
+            <div class="mood-options">
+                <label>
+                    <input type="radio" name="mood" value="happy" required>
+                    <div class="mood-card happy">
+                        <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="Happy">
+                        <span>Happy</span>
+                    </div>
+                </label>
+                <label>
+                    <input type="radio" name="mood" value="sad">
+                    <div class="mood-card sad">
+                        <img src="https://cdn-icons-png.flaticon.com/512/742/742752.png" alt="Sad">
+                        <span>Sad</span>
+                    </div>
+                </label>
+                <label>
+                    <input type="radio" name="mood" value="angry">
+                    <div class="mood-card angry">
+                        <img src="https://cdn-icons-png.flaticon.com/512/742/742750.png" alt="Angry">
+                        <span>Angry</span>
+                    </div>
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script src="assets/JS/question.js"></script>
+</body>
+</html>
