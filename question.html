@@ -1,44 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mood Recommendations</title>
-  <link rel="stylesheet" href="assets/css/question.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>പുസ്തകപ്പുഴു | Emotional Wellness Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/question.css" />
+    <link rel="icon" href="assets/icons/favicon.ico" />
 </head>
 <body>
-  <div class="container">
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">
+                    <i class="fas fa-brain"></i> MoodBalance
+                </h1>
+                <p class="app-subtitle">Your emotional wellness companion</p>
+            </div>
+            <div class="header-decoration"></div>
+        </header>
 
-    <h1>What's Your Mood Today? 🎯</h1>
+        <main class="app-main">
+            <section class="mood-selector-section card">
+                <div class="section-header">
+                    <h2><i class="fas fa-heartbeat"></i> How are you feeling today?</h2>
+                    <p>Select your current mood to get balancing recommendations</p>
+                </div>
 
-    <div id="moodSelection" class="mood-cards">
-      <button class="mood-btn" data-mood="happy">😊 Happy</button>
-      <button class="mood-btn" data-mood="sad">😢 Sad</button>
-      <button class="mood-btn" data-mood="romantic">❤️ Romantic</button>
-      <button class="mood-btn" data-mood="energetic">⚡ Energetic</button>
-      <button class="mood-btn" data-mood="relaxed">😌 Relaxed</button>
-      <button class="mood-btn" data-mood="angry">😡 Angry</button>
-      <button class="mood-btn" data-mood="lonely">🥺 Lonely</button>
-      <button class="mood-btn" data-mood="motivated">🚀 Motivated</button>
-      <button class="mood-btn" data-mood="nostalgic">📜 Nostalgic</button>
-      <button class="mood-btn" data-mood="bored">😐 Bored</button>
+                <div class="mood-grid">
+                    <button class="mood-card" data-mood="happy">
+                        <span class="mood-emoji">😊</span>
+                        <span class="mood-label">Happy</span>
+                    </button>
+                    <button class="mood-card" data-mood="sad">
+                        <span class="mood-emoji">😢</span>
+                        <span class="mood-label">Sad</span>
+                    </button>
+                    <button class="mood-card" data-mood="romantic">
+                        <span class="mood-emoji">❤️</span>
+                        <span class="mood-label">Romantic</span>
+                    </button>
+                    <button class="mood-card" data-mood="energetic">
+                        <span class="mood-emoji">⚡</span>
+                        <span class="mood-label">Energetic</span>
+                    </button>
+                    <button class="mood-card" data-mood="relaxed">
+                        <span class="mood-emoji">😌</span>
+                        <span class="mood-label">Relaxed</span>
+                    </button>
+                    <button class="mood-card" data-mood="angry">
+                        <span class="mood-emoji">😡</span>
+                        <span class="mood-label">Angry</span>
+                    </button>
+                    <button class="mood-card" data-mood="lonely">
+                        <span class="mood-emoji">🥺</span>
+                        <span class="mood-label">Lonely</span>
+                    </button>
+                    <button class="mood-card" data-mood="motivated">
+                        <span class="mood-emoji">🚀</span>
+                        <span class="mood-label">Motivated</span>
+                    </button>
+                    <button class="mood-card" data-mood="nostalgic">
+                        <span class="mood-emoji">📜</span>
+                        <span class="mood-label">Nostalgic</span>
+                    </button>
+                    <button class="mood-card" data-mood="bored">
+                        <span class="mood-emoji">😐</span>
+                        <span class="mood-label">Bored</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="recommendation-section card" id="choiceSection">
+                <div class="section-header">
+                    <h2><i class="fas fa-balance-scale"></i> Balance your mood with</h2>
+                    <p>Choose what you'd like to experience</p>
+                </div>
+
+                <div class="recommendation-options">
+                    <button id="songBtn" class="recommendation-card">
+                        <div class="card-icon music">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Music</h3>
+                        <p>Listen to balancing tracks</p>
+                    </button>
+
+                    <button id="bookBtn" class="recommendation-card">
+                        <div class="card-icon book">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Book</h3>
+                        <p>Read balancing suggestions</p>
+                    </button>
+                </div>
+
+                <div id="playerContainer" class="music-player"></div>
+            </section>
+
+            <section class="saved-section card">
+                <div class="section-header">
+                    <h2><i class="fas fa-bookmark"></i> Your Saved Recommendations</h2>
+                    <p>Your personal collection of mood-balancing content</p>
+                </div>
+
+                <div class="saved-controls">
+                    <button id="clearStorage" class="clear-btn">
+                        <i class="fas fa-trash-alt"></i> Clear All
+                    </button>
+                </div>
+
+                <div id="savedList" class="saved-grid">
+                    <!-- Dynamically populated -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>© 2025 പുസ്തകപ്പുഴു | Designed for emotional wellness</p>
+        </footer>
     </div>
-    
-    <div id="playerContainer" style="margin-top: 20px;"></div>
-    <div id="choiceSection" class="hidden">
-      <h2>What do you want a recommendation for?</h2>
-      <button id="songBtn">🎵 Song</button>
-      <button id="bookBtn">📚 Book</button>
-    </div>
 
-  </div>
-
-  <section id="myCollection">
-    <h2>My Saved Recommendations</h2>
-    <div id="savedList"></div>
-    <button id="clearStorage">Clear All</button>
-  </section>
-
-  <script src="assets/JS/question.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="assets/JS/question.js"></script>
 </body>
 </html>
