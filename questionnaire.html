@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>പുസ്തകപ്പുഴു | Mood Check</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/questionnaire.css">
+</head>
+<body>
+  <div class="questionnaire-container">
+    <h1>What's your vibe today? 🎭</h1>
+    
+    <!-- Emoji Mood Picker -->
+    <div class="mood-options">
+      <button data-mood="calm" class="mood-btn">😌 Calm</button>
+      <button data-mood="energetic" class="mood-btn">🔥 Energetic</button>
+      <button data-mood="melancholy" class="mood-btn">🌙 Melancholy</button>
+      <button data-mood="random" class="mood-btn">🎲 Surprise Me</button>
+    </div>
+
+    <!-- Hidden Personality Roast (Will be filled by JS) -->
+    <p id="roast-text" class="roast"></p>
+    
+    <!-- Next Button (Hidden until mood is selected) -->
+    <a href="song-recommendation.html" id="next-btn" class="hidden">Continue →</a>
+  </div>
+
+  <script src="assets/js/questionnaire.js"></script>
+</body>
+</html>
