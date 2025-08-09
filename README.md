@@ -33,7 +33,8 @@ For Software:
 
 
 ### Implementation
-
+Built with HTML, CSS, and JavaScript, the app recommends opposite mood-based songs and books. It saves your choices locally for easy access later and provides a smooth, responsive user interface.
+###Implementation
 
 ### Project Documentation
 For Software:or Software:
