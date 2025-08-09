@@ -1,0 +1,226 @@
+/* Base Styles */
+:root {
+    --pastel-pink: #FFD1DC;
+    --pastel-blue: #A7C7E7;
+    --pastel-green: #C1E1C1;
+    --pastel-purple: #D8BFD8;
+    --pastel-yellow: #FAF3DD;
+    --text-dark: #4A4A4A;
+    --text-light: #6D6D6D;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FAFAFA;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links a:hover {
+    color: var(--text-dark);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Main Content */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 3rem;
+}
+
+.mascot {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* Mood Selector */
+.mood-selector {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.mood-option {
+    background-color: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 120px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.mood-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mood-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mood-option p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Color Themes for Moods */
+.mood-option[data-mood="calm"] {
+    background-color: var(--pastel-blue);
+}
+.mood-option[data-mood="happy"] {
+    background-color: var(--pastel-yellow);
+}
+.mood-option[data-mood="energetic"] {
+    background-color: var(--pastel-pink);
+}
+.mood-option[data-mood="melancholy"] {
+    background-color: var(--pastel-purple);
+}
+
+/* Buttons */
+.surprise-btn {
+    background-color: var(--pastel-green);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+}
+
+.surprise-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card i {
+    font-size: 2rem;
+    color: var(--pastel-pink);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin: 0.5rem 0;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .mood-selector {
+        gap: 1rem;
+    }
+    
+    .mood-option {
+        width: 100px;
+        padding: 1rem;
+    }
+    
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-card {
+        width: 100%;
+    }
+}
