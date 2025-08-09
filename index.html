@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Exam Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f4f7f8;
+      color: #333;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #00539C;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question h3 {
+      margin-bottom: 8px;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+    button {
+      background-color: #00539C;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #003f6d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sample Exam</h1>
+  <p>Please answer the following questions and click Submit when you’re done.</p>
+
+  <form id="exam-form">
+    <div class="question">
+      <h3>1. What is the capital of France?</h3>
+      <div class="options">
+        <label><input type="radio" name="q1" value="Paris" /> Paris</label>
+        <label><input type="radio" name="q1" value="London" /> London</label>
+        <label><input type="radio" name="q1" value="Rome" /> Rome</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>2. Which language runs in a web browser?</h3>
+      <div class="options">
+        <label><input type="radio" name="q2" value="Java" /> Java</label>
+        <label><input type="radio" name="q2" value="C++" /> C++</label>
+        <label><input type="radio" name="q2" value="JavaScript" /> JavaScript</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <h3>3. What does CSS stand for?</h3>
+      <div class="options">
+        <label><input type="radio" name="q3" value="Computer Style Sheets" /> Computer Style Sheets</label>
+        <label><input type="radio" name="q3" value="Cascading Style Sheets" /> Cascading Style Sheets</label>
+        <label><input type="radio" name="q3" value="Creative Style Sheets" /> Creative Style Sheets</label>
+      </div>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById('exam-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Correct answers
+      const answers = {
+        q1: "Paris",
+        q2: "JavaScript",
+        q3: "Cascading Style Sheets"
+      };
+
+      let score = 0;
+      let total = Object.keys(answers).length;
+
+      for (const [question, correctAnswer] of Object.entries(answers)) {
+        const selected = document.querySelector(`input[name="${question}"]:checked`);
+        if (selected && selected.value === correctAnswer) {
+          score++;
+        }
+      }
+
+      alert(`You scored ${score} out of ${total}!`);
+    });
+  </script>
+
+</body>
+</html>
