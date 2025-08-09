@@ -1,0 +1,78 @@
+/* Container */
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+/* Mood Cards */
+.mood-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.mood-btn {
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 110px;
+}
+
+.mood-btn.selected,
+.mood-btn:hover {
+  border-color: #3498db;
+  background-color: #cce5ff;
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
+}
+
+/* My Collection Section */
+#myCollection {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 1rem;
+  background: #f7f9fc;
+  border-radius: 12px;
+  text-align: center;
+}
+
+#savedList .saved-item {
+  background: #e1eaff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+#savedList .saved-item h3 {
+  margin-top: 0;
+}
+
+#clearStorage {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#clearStorage:hover {
+  background: #ff1c1c;
+}

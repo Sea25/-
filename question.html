@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mood Recommendations</title>
+  <link rel="stylesheet" href="assets/css/question.css" />
+</head>
+<body>
+  <div class="container">
+
+    <h1>What's Your Mood Today? 🎯</h1>
+
+    <div id="moodSelection" class="mood-cards">
+      <button class="mood-btn" data-mood="happy">😊 Happy</button>
+      <button class="mood-btn" data-mood="sad">😢 Sad</button>
+      <button class="mood-btn" data-mood="romantic">❤️ Romantic</button>
+      <button class="mood-btn" data-mood="energetic">⚡ Energetic</button>
+      <button class="mood-btn" data-mood="relaxed">😌 Relaxed</button>
+      <button class="mood-btn" data-mood="angry">😡 Angry</button>
+      <button class="mood-btn" data-mood="lonely">🥺 Lonely</button>
+      <button class="mood-btn" data-mood="motivated">🚀 Motivated</button>
+      <button class="mood-btn" data-mood="nostalgic">📜 Nostalgic</button>
+      <button class="mood-btn" data-mood="bored">😐 Bored</button>
+    </div>
+    
+    <div id="playerContainer" style="margin-top: 20px;"></div>
+    <div id="choiceSection" class="hidden">
+      <h2>What do you want a recommendation for?</h2>
+      <button id="songBtn">🎵 Song</button>
+      <button id="bookBtn">📚 Book</button>
+    </div>
+
+  </div>
+
+  <section id="myCollection">
+    <h2>My Saved Recommendations</h2>
+    <div id="savedList"></div>
+    <button id="clearStorage">Clear All</button>
+  </section>
+
+  <script src="assets/JS/question.js"></script>
+</body>
+</html>
