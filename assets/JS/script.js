@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const moods = ['calm', 'happy', 'energetic', 'melancholy'];
         const randomMood = moods[Math.floor(Math.random() * moods.length)];
         alert(`Surprise! You got ${randomMood} mood!`);
-    });
-    
+    }); 
     // Mobile menu toggle would go here
 });
