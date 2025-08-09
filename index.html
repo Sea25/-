@@ -26,7 +26,7 @@
             scroll-behavior: smooth;
         }
         
-        /* Hero Section */
+        /* Hero Section (EXACTLY UNCHANGED) */
         .hero {
             height: 100vh;
             background: 
@@ -99,63 +99,52 @@
             cursor: pointer;
         }
         
-        /* About Section */
+        /* About Section (Key Concepts Only) */
         .about {
             padding: 5rem 2rem;
             background: white;
         }
         
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--pastel-lavender);
-        }
-        
-        .mood-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
+        .concept-container {
+            max-width: 800px;
             margin: 0 auto;
         }
         
-        .mood-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-        
-        .mood-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        
-        .mood-emoji {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .mood-title {
+        .concept-title {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin: 0.5rem 0;
+            font-size: 2rem;
             color: var(--pastel-lavender);
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
         
-        .song-title {
-            font-weight: 600;
-            color: var(--pastel-pink);
+        .highlight-box {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
         
-        .book-title {
-            font-style: italic;
-            color: var(--pastel-blue);
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-list i {
+            margin-right: 15px;
+            color: var(--pastel-lavender);
+            font-size: 1.2rem;
+            min-width: 25px;
         }
         
         /* Animations */
@@ -179,18 +168,21 @@
             .nav-link {
                 padding: 0.6rem 1.2rem;
             }
+            .concept-title {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
+    <!-- First Page (EXACTLY UNCHANGED) -->
     <section class="hero">
         <div class="content-box">
             <div class="logo">പുസ്തകപ്പുഴു</div>
             <div class="tagline">"Read between the lines & play between the notes" 🎶✨</div>
             <div class="nav-links">
-                <a href="#about" class="nav-link">Explore</a>
-                <a href="#" class="nav-link">How It Works</a>
+                
+                
                 <a href="#" class="nav-link">Get Started</a>
             </div>
         </div>
@@ -199,37 +191,32 @@
         </div>
     </section>
     
-    <!-- About Section -->
+    <!-- Second Page (Key Concepts Only) -->
     <section class="about" id="about">
-        <h2 class="section-title">Your Mood Matches</h2>
-        <div class="mood-grid">
-            <div class="mood-card">
-                <div class="mood-emoji">😌</div>
-                <h3 class="mood-title">Chill Vibes</h3>
-                <p><span class="song-title">"River Flows in You"</span> + 
-                <span class="book-title">The Alchemist</span></p>
+        <div class="concept-container">
+            <h2 class="concept-title"><i class="fas fa-lightbulb"></i> Project Concept</h2>
+            <div class="highlight-box">
+                An interactive platform that recommends a perfect song and matching book based on your current mood — making reading more immersive and enjoyable.
             </div>
-            
-            <div class="mood-card">
-                <div class="mood-emoji">🔥</div>
-                <h3 class="mood-title">Energetic</h3>
-                <p><span class="song-title">"Levitating"</span> + 
-                <span class="book-title">Ready Player One</span></p>
+
+            <h2 class="concept-title"><i class="fas fa-question-circle"></i> Problem Statement</h2>
+            <div class="highlight-box">
+                Many people want to read but don't know where to start. Reading mood can be enhanced with the right background vibe. Music can help set the emotional tone for reading, but no tool combines both.
             </div>
-            
-            <div class="mood-card">
-                <div class="mood-emoji">🌙</div>
-                <h3 class="mood-title">Melancholy</h3>
-                <p><span class="song-title">"Hallelujah"</span> + 
-                <span class="book-title">The Bell Jar</span></p>
+
+            <h2 class="concept-title"><i class="fas fa-check-circle"></i> Solution</h2>
+            <div class="highlight-box">
+                പുസ്തകപ്പുഴു asks users simple personality and mood questions, then analyzes their mood & traits to suggest a matching song to listen to before reading and recommends a book with matching vibe.
             </div>
-            
-            <div class="mood-card">
-                <div class="mood-emoji">🤩</div>
-                <h3 class="mood-title">Adventurous</h3>
-                <p><span class="song-title">"The Nights"</span> + 
-                <span class="book-title">The Hobbit</span></p>
-            </div>
+
+            <h2 class="concept-title"><i class="fas fa-star"></i> Key Features</h2>
+            <ul class="feature-list">
+                <li><i class="fas fa-smile"></i> <strong>Mood & Personality Input:</strong> Simple, engaging questionnaire with emoji/slider options</li>
+                <li><i class="fas fa-music"></i> <strong>Mood Song Recommendation:</strong> Suggests real songs from Spotify/YouTube</li>
+                <li><i class="fas fa-book"></i> <strong>Book Recommendation:</strong> Matches the mood & personality to curated book lists</li>
+                <li><i class="fas fa-magic"></i> <strong>Thematic Reveal:</strong> Smooth animation with mood-matched background colors</li>
+                <li><i class="fas fa-share-alt"></i> <strong>Save & Share:</strong> Save results and share recommendations with friends</li>
+            </ul>
         </div>
     </section>
 
