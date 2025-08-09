@@ -30,24 +30,10 @@ For Software:
 - [none]
 - [html,css,js]
 
-For Hardware:
-- [none]
-- [none]
-- [none]
+
 
 ### Implementation
 
-# Installation
-[For Software:# Clone the repository
-git clone https://github.com/Sea25/-.git
-
-# Navigate into the project folder
-cd book-recommendation]
-
-# Run
-[# Method 1: Double-click index.html in your file explorer
-# Method 2: Open in VS Code and use "Live Server" extension
-]
 
 ### Project Documentation
 For Software:or Software:
@@ -69,37 +55,14 @@ Future Enhancements – (Optional) E.g., Add backend, user accounts, etc.
 
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1883" height="852" alt="image" src="https://github.com/user-attachments/assets/53f2b208-12c8-465a-96a8-ad67db36afb8" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1882" height="858" alt="image" src="https://github.com/user-attachments/assets/e49906f4-2db6-41ec-8592-2e0f1a8a2862" />
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
 
-For Hardware:
+<img width="1880" height="844" alt="image" src="https://github.com/user-attachments/assets/f4ef945e-83c9-43e0-8d58-cbbfc256b75d" />
 
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
@@ -110,9 +73,9 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [SONA ELIZABETH ABRAHAM]: [questionairre page developments]
+- [SIVA NANDA C P]: [Home page development]
+
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
