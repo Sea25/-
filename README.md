@@ -66,7 +66,7 @@ Future Enhancements – (Optional) E.g., Add backend, user accounts, etc.
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+[https://drive.google.com/file/d/1YfSRqRliBZv8_ARpx9r67h1Vlkyj3HgC/view?usp=drive_link]
 *Explain what the video demonstrates*
 
 # Additional Demos
