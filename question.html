@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mood Recommendations</title>
-  <link rel="stylesheet" href="assets/css/question.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moodify | Personalized Recommendations</title>
+  <link rel="stylesheet" href="assets/css/question.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-
-    <h1>What's Your Mood Today? 🎯</h1>
+    <header>
+      <h1>What's Your Mood Today? <span>🎯</span></h1>
+      <p>Select your mood to get personalized recommendations!</p>
+    </header>
 
     <div id="moodSelection" class="mood-cards">
       <button class="mood-btn" data-mood="happy">😊 Happy</button>
@@ -23,22 +26,26 @@
       <button class="mood-btn" data-mood="nostalgic">📜 Nostalgic</button>
       <button class="mood-btn" data-mood="bored">😐 Bored</button>
     </div>
-    
-    <div id="playerContainer" style="margin-top: 20px;"></div>
+
+    <div id="playerContainer"></div>
+
     <div id="choiceSection" class="hidden">
-      <h2>What do you want a recommendation for?</h2>
-      <button id="songBtn">🎵 Song</button>
-      <button id="bookBtn">📚 Book</button>
+      <h2>What do you need?</h2>
+      <div class="choice-buttons">
+        <button id="songBtn" class="choice-btn">🎵 Music</button>
+        <button id="bookBtn" class="choice-btn">📚 Book</button>
+      </div>
     </div>
 
+    <section id="myCollection">
+      <h2>My Saved Recommendations</h2>
+      <div id="savedList"></div>
+      <button id="clearStorage">Clear All</button>
+    </section>
   </div>
 
-  <section id="myCollection">
-    <h2>My Saved Recommendations</h2>
-    <div id="savedList"></div>
-    <button id="clearStorage">Clear All</button>
-  </section>
-
+  <!-- Confetti & Spotify Embed Support -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
   <script src="assets/JS/question.js"></script>
 </body>
 </html>
