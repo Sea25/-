@@ -2,11 +2,11 @@
 
 /* Base Styles */
 :root {
-    --pastel-pink: #f8f1f2;
-    --pastel-blue: #f2f3f5;
-    --pastel-green: #C1E1C1;
-    --pastel-purple: #eee2ee;
-    --pastel-yellow: #ece0b9;
+    --pastel-pink: #5a5555;
+    --pastel-blue: #505152;
+    --pastel-green: #575857;
+    --pastel-purple: #747274;
+    --pastel-yellow: #535352;
     --text-dark: #080808;
     --text-light: #3d3a3a;
 }
@@ -82,7 +82,7 @@ body {
 }
 
 .highlight-box {
-    background-color: white;
+    background-color: rgb(117, 114, 114);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
