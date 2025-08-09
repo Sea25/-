@@ -1,31 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>പുസ്തകപ്പുഴു | Mood Check</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/questionnaire.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Questionnaire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/questionnaire.css">
 </head>
 <body>
-  <div class="questionnaire-container">
-    <h1>What's your vibe today? 🎭</h1>
-    
-    <!-- Emoji Mood Picker -->
-    <div class="mood-options">
-      <button data-mood="calm" class="mood-btn">😌 Calm</button>
-      <button data-mood="energetic" class="mood-btn">🔥 Energetic</button>
-      <button data-mood="melancholy" class="mood-btn">🌙 Melancholy</button>
-      <button data-mood="random" class="mood-btn">🎲 Surprise Me</button>
+    <div class="questionnaire-container">
+        <div class="progress-bar"></div>
+        
+        <div class="questionnaire-header">
+            <h1>Personality & Mood Quiz</h1>
+            <p>Discover your perfect book and music match</p>
+        </div>
+        
+        <div class="questionnaire-body">
+            <!-- Replace the questions section with this: -->
+<div class="questionnaire-body">
+    <!-- Question 1 - Current Feeling -->
+    <div class="question active" data-question="1">
+        <h2>Which best describes you right now?</h2>
+        <div class="options-container">
+            <div class="option" data-value="calm">
+                <div class="option-icon">🧘</div>
+                <div class="option-label">Zen Calm</div>
+            </div>
+            <div class="option" data-value="energetic">
+                <div class="option-icon">⚡</div>
+                <div class="option-label">Electric Energy</div>
+            </div>
+            <div class="option" data-value="sad">
+                <div class="option-icon">🌧️</div>
+                <div class="option-label">Melancholy Rain</div>
+            </div>
+            <div class="option" data-value="excited">
+                <div class="option-icon">🎉</div>
+                <div class="option-label">Bubbly Excitement</div>
+            </div>
+            <div class="option" data-value="dreamy">
+                <div class="option-icon">🌌</div>
+                <div class="option-label">Daydreamer</div>
+            </div>
+            <div class="option" data-value="nostalgic">
+                <div class="option-icon">📻</div>
+                <div class="option-label">Wistful Nostalgia</div>
+            </div>
+            <div class="option" data-value="playful">
+                <div class="option-icon">🤹</div>
+                <div class="option-label">Silly Playful</div>
+            </div>
+            <div class="option" data-value="contemplative">
+                <div class="option-icon">🤔</div>
+                <div class="option-label">Deep Thinker</div>
+            </div>
+        </div>
     </div>
 
-    <!-- Hidden Personality Roast (Will be filled by JS) -->
-    <p id="roast-text" class="roast"></p>
-    
-    <!-- Next Button (Hidden until mood is selected) -->
-    <a href="song-recommendation.html" id="next-btn" class="hidden">Continue →</a>
-  </div>
+    <!-- Question 4 - Emotional Desire -->
+    <div class="question" data-question="4">
+        <h2>What do you want to feel while reading?</h2>
+        <div class="options-container">
+            <div class="option" data-value="comfort">
+                <div class="option-icon">🛋️</div>
+                <div class="option-label">Warm Comfort</div>
+            </div>
+            <div class="option" data-value="adventure">
+                <div class="option-icon">🗺️</div>
+                <div class="option-label">Thrilling Adventure</div>
+            </div>
+            <div class="option" data-value="inspiration">
+                <div class="option-icon">✨</div>
+                <div class="option-label">Creative Spark</div>
+            </div>
+            <div class="option" data-value="reflection">
+                <div class="option-icon">🪞</div>
+                <div class="option-label">Deep Reflection</div>
+            </div>
+            <div class="option" data-value="romance">
+                <div class="option-icon">💘</div>
+                <div class="option-label">Heart Flutters</div>
+            </div>
+            <div class="option" data-value="mystery">
+                <div class="option-icon">🕵️</div>
+                <div class="option-label">Curious Mystery</div>
+            </div>
+            <div class="option" data-value="catharsis">
+                <div class="option-icon">🎭</div>
+                <div class="option-label">Emotional Release</div>
+            </div>
+            <div class="option" data-value="wonder">
+                <div class="option-icon">🔮</div>
+                <div class="option-label">Childlike Wonder</div>
+            </div>
+        </div>
+    </div>
 
-  <script src="assets/js/questionnaire.js"></script>
+    <!-- Question 5 - Tone Preference -->
+    <div class="question" data-question="5">
+        <h2>Which tone suits your mood?</h2>
+        <div class="options-container">
+            <div class="option" data-value="light">
+                <div class="option-icon">🪁</div>
+                <div class="option-label">Light & Breezy</div>
+            </div>
+            <div class="option" data-value="serious">
+                <div class="option-icon">📜</div>
+                <div class="option-label">Deep & Serious</div>
+            </div>
+            <div class="option" data-value="mysterious">
+                <div class="option-icon">🔦</div>
+                <div class="option-label">Mysterious Whispers</div>
+            </div>
+            <div class="option" data-value="uplifting">
+                <div class="option-icon">🌻</div>
+                <div class="option-label">Uplifting Joy</div>
+            </div>
+            <div class="option" data-value="whimsical">
+                <div class="option-icon">🎠</div>
+                <div class="option-label">Whimsical Charm</div>
+            </div>
+            <div class="option" data-value="dark-humor">
+                <div class="option-icon">🖤</div>
+                <div class="option-label">Dark Humor</div>
+            </div>
+            <div class="option" data-value="poetic">
+                <div class="option-icon">✍️</div>
+                <div class="option-label">Lyrical Poetry</div>
+            </div>
+            <div class="option" data-value="satirical">
+                <div class="option-icon">👑</div>
+                <div class="option-label">Witty Satire</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 6 - Vibe Scenes -->
+    <div class="question" data-question="6">
+        <h2>Pick the scene that feels like your mood:</h2>
+        <div class="options-container scene-options">
+            <div class="option" data-value="rainy-cafe">
+                <div class="scene-icon" style="background-image: url('images/rainy-cafe.jpg')"></div>
+                <div class="option-label">Rainy Café</div>
+            </div>
+            <div class="option" data-value="summer-festival">
+                <div class="scene-icon" style="background-image: url('images/summer-fest.jpg')"></div>
+                <div class="option-label">Summer Festival</div>
+            </div>
+            <div class="option" data-value="quiet-library">
+                <div class="scene-icon" style="background-image: url('images/library.jpg')"></div>
+                <div class="option-label">Quiet Library</div>
+            </div>
+            <div class="option" data-value="starry-night">
+                <div class="scene-icon" style="background-image: url('images/starry-night.jpg')"></div>
+                <div class="option-label">Starry Night</div>
+            </div>
+            <div class="option" data-value="beach-sunset">
+                <div class="scene-icon" style="background-image: url('images/beach.jpg')"></div>
+                <div class="option-label">Beach Sunset</div>
+            </div>
+            <div class="option" data-value="mountain-cabin">
+                <div class="scene-icon" style="background-image: url('images/cabin.jpg')"></div>
+                <div class="option-label">Mountain Cabin</div>
+            </div>
+            <div class="option" data-value="city-lights">
+                <div class="scene-icon" style="background-image: url('images/city.jpg')"></div>
+                <div class="option-label">City Lights</div>
+            </div>
+            <div class="option" data-value="countryside">
+                <div class="scene-icon" style="background-image: url('images/countryside.jpg')"></div>
+                <div class="option-label">Countryside</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 8 - Color of the Day -->
+    <div class="question" data-question="8">
+        <h2>Which color palette feels like your mood?</h2>
+        <div class="options-container color-options">
+            <div class="option" data-value="pastel">
+                <div class="color-palette" style="background: linear-gradient(135deg, #FFD6E0, #C1FBA4, #7BF1A8, #FFEF9E, #A0E7E5, #B5F8FE, #DEDAF4)"></div>
+                <div class="option-label">Soft Pastels</div>
+            </div>
+            <div class="option" data-value="neon">
+                <div class="color-palette" style="background: linear-gradient(135deg, #FF2A6D, #05D9E8, #D300C5, #FFEE00, #00FF87)"></div>
+                <div class="option-label">Electric Neon</div>
+            </div>
+            <div class="option" data-value="dark">
+                <div class="color-palette" style="background: linear-gradient(135deg, #0F0E11, #2C2B30, #4A4A4A, #5E5C64)"></div>
+                <div class="option-label">Moody Darks</div>
+            </div>
+            <div class="option" data-value="earth">
+                <div class="color-palette" style="background: linear-gradient(135deg, #5E3023, #895737, #B88B4A, #DDB771)"></div>
+                <div class="option-label">Warm Earth</div>
+            </div>
+            <div class="option" data-value="jewel">
+                <div class="color-palette" style="background: linear-gradient(135deg, #3A015C, #4F0147, #35012C, #290025)"></div>
+                <div class="option-label">Rich Jewel</div>
+            </div>
+            <div class="option" data-value="ocean">
+                <div class="color-palette" style="background: linear-gradient(135deg, #03045E, #023E8A, #0077B6, #0096C7, #00B4D8)"></div>
+                <div class="option-label">Ocean Blues</div>
+            </div>
+            <div class="option" data-value="sunset">
+                <div class="color-palette" style="background: linear-gradient(135deg, #FF7B54, #FFB26B, #FFD56F, #939B62)"></div>
+                <div class="option-label">Golden Sunset</div>
+            </div>
+            <div class="option" data-value="monochrome">
+                <div class="color-palette" style="background: linear-gradient(135deg, #F8F9FA, #E9ECEF, #DEE2E6, #CED4DA)"></div>
+                <div class="option-label">Minimal Mono</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="navigation-buttons">
+        <button class="nav-btn prev" disabled>
+            <i class="fas fa-arrow-left"></i> Previous
+        </button>
+        <button class="nav-btn next">
+            Next <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</div>
+            
+            
+            
+            
+            
+            <!-- Navigation Buttons -->
+            <div class="navigation-buttons">
+                <button class="nav-btn prev" disabled>
+                    <i class="fas fa-arrow-left"></i> Previous
+                </button>
+                <button class="nav-btn next">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        
+      <!-- Replace the completion screen section with: -->
+<div class="completion-screen">
+    <div class="result-icon">✨</div>
+    <h2>Your Recommendations Are Ready!</h2>
+    <div class="recommendation-buttons">
+        <a href="song.html" class="rec-btn song-btn">
+            <i class="fas fa-music"></i> View Song Recommendation
+        </a>
+        <a href="book.html" class="rec-btn book-btn">
+            <i class="fas fa-book-open"></i> View Book Recommendation
+        </a>
+    </div>
+</div>
+
+    <script src="assets/JS/questionnaire.js"></script>
 </body>
 </html>

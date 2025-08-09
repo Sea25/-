@@ -1,56 +1,252 @@
-/* questionnaire.css */
+:root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --accent: #fd79a8;
+    --light: #f8f9fa;
+    --dark: #2d3436;
+    --shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
-  background: #f8f9fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  transition: background 0.5s;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--dark);
 }
 
 .questionnaire-container {
-  text-align: center;
-  padding: 2rem;
-  max-width: 500px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
 }
 
-.mood-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin: 2rem 0;
+.progress-bar {
+    height: 6px;
+    background: var(--secondary);
+    width: 0%;
+    transition: width 0.5s ease;
 }
 
-.mood-btn {
-  background: white;
-  border: 2px solid #e9ecef;
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all 0.3s;
+.questionnaire-header {
+    padding: 30px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
 }
 
-.mood-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.questionnaire-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
-#roast-text {
-  font-size: 1.2rem;
-  margin: 1.5rem 0;
-  min-height: 2rem;
-  color: #495057;
+.questionnaire-header p {
+    opacity: 0.9;
+    font-weight: 300;
 }
 
-.hidden {
-  display: none;
+.questionnaire-body {
+    padding: 30px;
 }
 
-/* Mood-specific backgrounds (JS will add these classes) */
-.calm-bg { background: #E3F2FD; }
-.energetic-bg { background: #FFEBEE; }
-.melancholy-bg { background: #EDE7F6; }
+.question {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.question.active {
+    display: block;
+}
+
+.question h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: var(--primary);
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.option {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: var(--secondary);
+}
+
+.option.selected {
+    border-color: var(--primary);
+    background: rgba(108, 92, 231, 0.05);
+}
+
+.option-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.option.selected .option-icon {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+.option-label {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Remove previous nav button styles and add: */
+.next {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.next:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+}
+
+.next:disabled {
+    background: #e0e0e0;
+    cursor: not-allowed;
+}
+
+/* Completion screen styles */
+.recommendation-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.rec-btn {
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    min-width: 220px;
+    justify-content: center;
+}
+
+.song-btn {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+}
+
+.book-btn {
+    background: linear-gradient(135deg, #00b894, #55efc4);
+    color: white;
+}
+
+.rec-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.rec-btn i {
+    margin-right: 10px;
+}
+
+.completion-screen {
+    text-align: center;
+    padding: 40px 30px;
+    display: none;
+}
+
+.completion-screen h2 {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.completion-screen p {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.result-icon {
+    font-size: 80px;
+    color: var(--accent);
+    margin: 20px 0;
+    animation: bounce 2s infinite;
+}
+
+.restart-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.restart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(253, 121, 168, 0.4);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+/* Confetti effect */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent);
+    opacity: 0;
+}
