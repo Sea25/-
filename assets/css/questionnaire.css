@@ -1,0 +1,56 @@
+/* questionnaire.css */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  transition: background 0.5s;
+}
+
+.questionnaire-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 500px;
+}
+
+.mood-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.mood-btn {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mood-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#roast-text {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+  min-height: 2rem;
+  color: #495057;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Mood-specific backgrounds (JS will add these classes) */
+.calm-bg { background: #E3F2FD; }
+.energetic-bg { background: #FFEBEE; }
+.melancholy-bg { background: #EDE7F6; }
