@@ -1,175 +1,78 @@
-/* Reset & base */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Merriweather', serif;
-  height: 100vh;
-  background: linear-gradient(135deg, #076585, #fff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  color: #f0f0f5;
-  user-select: none;
-}
-
-/* Container with translucent glass effect */
+/* Container */
 .container {
-  background: rgba(104, 102, 102, 0.12);
-  backdrop-filter: blur(15px);
-  border-radius: 30px;
-  box-shadow:
-    0 4px 30px rgba(0, 0, 0, 0.25),
-    inset 0 0 10px rgba(255, 255, 255, 0.1);
-  width: 100%;
-  max-width: 460px;
-  padding: 45px 40px;
+  max-width: 700px;
+  margin: 2rem auto;
   text-align: center;
-  animation: fadeInUp 0.9s ease forwards;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Heading */
-h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 30px;
-  letter-spacing: 0.06em;
-  color: #100353;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  font-family: 'Playfair Display', serif;
+h1, h2 {
+  color: #333;
 }
 
-/* Select dropdown */
-select {
-  width: 100%;
-  padding: 14px 20px;
-  font-size: 1.15rem;
-  font-family: 'Merriweather', serif;
-  color: #000000;
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 16px;
-  border: none;
-  box-shadow:
-    0 4px 8px rgba(118, 75, 162, 0.4);
+/* Mood Cards */
+.mood-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.mood-btn {
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  background: white;
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
-  margin-bottom: 32px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image:
-    url('data:image/svg+xml;utf8,<svg fill="%236c5ce7" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 15px center;
-  background-size: 20px 20px;
+  transition: all 0.3s ease;
+  min-width: 110px;
 }
 
-select:hover, select:focus {
-  box-shadow:
-    0 0 12px 2px #9c8be6;
-  outline: none;
+.mood-btn.selected,
+.mood-btn:hover {
+  border-color: #3498db;
+  background-color: #cce5ff;
 }
 
-/* Submit button */
-button[type="submit"] {
-  width: 100%;
-  padding: 16px 0;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #ece9f1;
-  background: linear-gradient(135deg, #BBD2C5, #536976,#292E49);
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.6);
-  cursor: pointer;
-  transition: background 0.4s ease, transform 0.2s ease;
-  font-family: 'Playfair Display', serif;
-}
-
-button[type="submit"]:hover {
-  background: linear-gradient(135deg, #8e72d9, #8363c3);
-  transform: scale(1.05);
-}
-
-/* Choice buttons container */
-#choiceSection {
-  margin-top: 40px;
-}
-
-#choiceSection h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 22px;
-  letter-spacing: 0.04em;
-  color: #d6cde7;
-  font-family: 'Playfair Display', serif;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* Smaller buttons for Song/Book */
-#choiceSection button {
-  width: 48%;
-  margin: 0 1% 12px;
-  padding: 14px 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #ece9f1;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  border: none;
-  border-radius: 18px;
-  box-shadow: 0 6px 15px rgba(118, 75, 162, 0.7);
-  cursor: pointer;
-  font-family: 'Playfair Display', serif;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#choiceSection button:hover {
-  background: linear-gradient(135deg, #8363c3, #8e72d9);
-  transform: scale(1.07);
-}
-
-/* Hidden helper class */
+/* Hidden class */
 .hidden {
-  display: none !important;
+  display: none;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* My Collection Section */
+#myCollection {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 1rem;
+  background: #f7f9fc;
+  border-radius: 12px;
+  text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-  .container {
-    padding: 35px 25px;
-  }
+#savedList .saved-item {
+  background: #e1eaff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
 
-  h1 {
-    font-size: 2.2rem;
-  }
+#savedList .saved-item h3 {
+  margin-top: 0;
+}
 
-  #choiceSection h2 {
-    font-size: 1.4rem;
-  }
+#clearStorage {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
-  #choiceSection button {
-    width: 100%;
-    margin: 8px 0;
-  }
-
-  select {
-    font-size: 1rem;
-  }
+#clearStorage:hover {
+  background: #ff1c1c;
 }

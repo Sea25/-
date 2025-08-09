@@ -1,28 +1,247 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bookworm | Welcome</title>
-<link rel="stylesheet" href="assets/css/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>പുസ്തകപ്പുഴു | Bookworm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --pastel-pink: #FFD6E0;
+            --pastel-blue: #C1E3FF;
+            --pastel-lavender: #E2D1F9;
+            --pastel-green: #D4F0C4;
+            --text-dark: #3A3A3A;
+            --nav-blue: #3498db;
+            --nav-blue-dark: #2980b9;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+        
+        /* Hero Section (EXACTLY UNCHANGED) */
+        .hero {
+            height: 100vh;
+            background: 
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2rem 3rem;
+            border-radius: 15px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            color: #333;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: #4a4a4a;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            padding: 0.8rem 1.5rem;
+            background-color: var(--nav-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            background-color: var(--nav-blue-dark);
+            transform: translateY(-3px);
+        }
+        
+        .scroll-hint {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        /* About Section (Key Concepts Only) */
+        .about {
+            padding: 5rem 2rem;
+            background: white;
+        }
+        
+        .concept-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .concept-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--pastel-lavender);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-list i {
+            margin-right: 15px;
+            color: var(--pastel-lavender);
+            font-size: 1.2rem;
+            min-width: 25px;
+        }
+        
+        /* Animations */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.2rem;
+            }
+            .tagline {
+                font-size: 1.1rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+            .nav-link {
+                padding: 0.6rem 1.2rem;
+            }
+            .concept-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- First Page (EXACTLY UNCHANGED) -->
+    <section class="hero">
+        <div class="content-box">
+            <div class="logo">പുസ്തകപ്പുഴു</div>
+            <div class="tagline">"Read between the lines & play between the notes" 🎶✨</div>
+            <div class="nav-links">
+                
+                
+                <a href="#" class="nav-link">Get Started</a>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    
+    <!-- Second Page (Key Concepts Only) -->
+    <section class="about" id="about">
+        <div class="concept-container">
+            <h2 class="concept-title"><i class="fas fa-lightbulb"></i> Project Concept</h2>
+            <div class="highlight-box">
+                An interactive platform that recommends a perfect song and matching book based on your current mood — making reading more immersive and enjoyable.
+            </div>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>പുസ്തകപ്പുഴു</h1>
-        <p>Discover the perfect book + music for your mood</p>
-        <a href="home.html" class="start-btn">Start</a>
-    </div>
-</section>
+            <h2 class="concept-title"><i class="fas fa-question-circle"></i> Problem Statement</h2>
+            <div class="highlight-box">
+                Many people want to read but don't know where to start. Reading mood can be enhanced with the right background vibe. Music can help set the emotional tone for reading, but no tool combines both.
+            </div>
 
-<!-- About Section -->
-<section class="about">
-    <h2>About the Project</h2>
-    <p>Bookworm matches your mood to curated books and songs, creating the perfect vibe for reading. Whether you're feeling calm, energetic, or somewhere in between, we have a recommendation ready for you!</p>
-    <p>Our mission is to make reading a more immersive and personalized experience.</p>
-</section>
+            <h2 class="concept-title"><i class="fas fa-check-circle"></i> Solution</h2>
+            <div class="highlight-box">
+                പുസ്തകപ്പുഴു asks users simple personality and mood questions, then analyzes their mood & traits to suggest a matching song to listen to before reading and recommends a book with matching vibe.
+            </div>
 
+            <h2 class="concept-title"><i class="fas fa-star"></i> Key Features</h2>
+            <ul class="feature-list">
+                <li><i class="fas fa-smile"></i> <strong>Mood & Personality Input:</strong> Simple, engaging questionnaire with emoji/slider options</li>
+                <li><i class="fas fa-music"></i> <strong>Mood Song Recommendation:</strong> Suggests real songs from Spotify/YouTube</li>
+                <li><i class="fas fa-book"></i> <strong>Book Recommendation:</strong> Matches the mood & personality to curated book lists</li>
+                <li><i class="fas fa-magic"></i> <strong>Thematic Reveal:</strong> Smooth animation with mood-matched background colors</li>
+                <li><i class="fas fa-share-alt"></i> <strong>Save & Share:</strong> Save results and share recommendations with friends</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll to about section
+        document.querySelector('.scroll-hint').addEventListener('click', () => {
+            document.getElementById('about').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+        
+        // Animated tagline rotation
+        const taglines = [
+            '"Read between the lines & play between the notes" 🎶✨',
+            '"Books that sing. Playlists that read." 📚🎧',
+            '"Your literary mixtape" 💿📖',
+            '"Soundtracked stories" 🎼📚'
+        ];
+        let current = 0;
+        setInterval(() => {
+            document.querySelector(".tagline").innerHTML = taglines[current];
+            current = (current + 1) % taglines.length;
+        }, 3000);
+    </script>
 </body>
 </html>
