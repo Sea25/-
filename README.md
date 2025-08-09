@@ -2,33 +2,33 @@
 
 
 # [Project Name] 🎯
-
+പുസ്തകപ്പുഴു
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: [BOTBUSTERS]
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: [SONA ELIZABATH ABRAHAM] - [CUSAT]
+- Member 2: [SIVA NANDA C P] - [CUSAT]
+
 
 ### Project Description
-[2-3 lines about what your project does]
+[An interactive platform that recommends a perfect song and matching book based on your current mood — making reading more immersive and enjoyable.]
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+[Almost everyone one is aware of their moods and interests ,no one really use a wepage for that.]
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+[recommending a book with a music according to your interest]
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- [html,css,js]
+- [html,css,js]
+- [none]
+- [html,css,js]
 
 For Hardware:
 - [List main components]
@@ -36,15 +36,37 @@ For Hardware:
 - [List tools required]
 
 ### Implementation
-For Software:
+
 # Installation
-[commands]
+[For Software:# Clone the repository
+git clone https://github.com/username/book-recommendation.git
+
+# Navigate into the project folder
+cd book-recommendation]
 
 # Run
-[commands]
+[# Method 1: Double-click index.html in your file explorer
+# Method 2: Open in VS Code and use "Live Server" extension
+]
 
 ### Project Documentation
-For Software:
+For Software:or Software:
+
+Project Overview – Short intro about what the project does.
+
+Technologies Used – HTML, CSS, JavaScript (vanilla)
+
+Features – Questionnaire, Book recommendation display, etc.
+
+System Requirements – Any modern web browser (Chrome, Firefox, Edge, etc.)
+
+How It Works – Step-by-step explanation of the questionnaire logic.
+
+Screenshots – Pictures of the UI, results page, etc.
+
+Future Enhancements – (Optional) E.g., Add backend, user accounts, etc.
+
+
 
 # Screenshots (Add at least 3)
 ![Screenshot1](Add screenshot 1 here with proper name)
