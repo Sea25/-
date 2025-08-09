@@ -3,39 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mood Selector</title>
+    <title>Mood Matcher</title>
     <link rel="stylesheet" href="assets/css/question.css">
 </head>
 <body>
     <div class="container">
-        <h1>What's Your Mood? 🎭</h1>
-        <form id="moodForm">
-            <div class="mood-options">
-                <label>
-                    <input type="radio" name="mood" value="happy" required>
-                    <div class="mood-card happy">
-                        <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="Happy">
-                        <span>Happy</span>
-                    </div>
-                </label>
-                <label>
-                    <input type="radio" name="mood" value="sad">
-                    <div class="mood-card sad">
-                        <img src="https://cdn-icons-png.flaticon.com/512/742/742752.png" alt="Sad">
-                        <span>Sad</span>
-                    </div>
-                </label>
-                <label>
-                    <input type="radio" name="mood" value="angry">
-                    <div class="mood-card angry">
-                        <img src="https://cdn-icons-png.flaticon.com/512/742/742750.png" alt="Angry">
-                        <span>Angry</span>
-                    </div>
-                </label>
-            </div>
+        <h1 class="title">🎭 Mood Matcher</h1>
+        <p class="subtitle">Pick your mood and get a *surprise* recommendation!</p>
 
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
+        <!-- Mood Selection Grid -->
+        <div class="mood-grid">
+            <div class="mood-card" data-mood="happy">
+                <img src="https://img.icons8.com/emoji/96/1f604.png" alt="Happy">
+                <span>Happy</span>
+            </div>
+            <div class="mood-card" data-mood="sad">
+                <img src="https://img.icons8.com/emoji/96/1f622.png" alt="Sad">
+                <span>Sad</span>
+            </div>
+            <div class="mood-card" data-mood="excited">
+                <img src="https://img.icons8.com/emoji/96/1f973.png" alt="Excited">
+                <span>Excited</span>
+            </div>
+            <div class="mood-card" data-mood="angry">
+                <img src="https://img.icons8.com/emoji/96/1f620.png" alt="Angry">
+                <span>Angry</span>
+            </div>
+            <div class="mood-card" data-mood="romantic">
+                <img src="https://img.icons8.com/emoji/96/1f60d.png" alt="Romantic">
+                <span>Romantic</span>
+            </div>
+            <div class="mood-card" data-mood="bored">
+                <img src="https://img.icons8.com/emoji/96/1f611.png" alt="Bored">
+                <span>Bored</span>
+            </div>
+            <div class="mood-card" data-mood="stressed">
+                <img src="https://img.icons8.com/emoji/96/1f62c.png" alt="Stressed">
+                <span>Stressed</span>
+            </div>
+            <div class="mood-card" data-mood="motivated">
+                <img src="https://img.icons8.com/emoji/96/1f4aa.png" alt="Motivated">
+                <span>Motivated</span>
+            </div>
+            <div class="mood-card" data-mood="nostalgic">
+                <img src="https://img.icons8.com/emoji/96/1f60c.png" alt="Nostalgic">
+                <span>Nostalgic</span>
+            </div>
+            <div class="mood-card" data-mood="lazy">
+                <img src="https://img.icons8.com/emoji/96/1f634.png" alt="Lazy">
+                <span>Lazy</span>
+            </div>
+        </div>
+
+        <!-- Recommendation Section -->
+        <div id="recommendation-section" class="hidden">
+            <h2 class="recommend-title">What would you like a recommendation for?</h2>
+            <div class="choice-buttons">
+                <button id="book-btn" class="choice">📚 Book</button>
+                <button id="song-btn" class="choice">🎵 Song</button>
+            </div>
+        </div>
     </div>
 
     <script src="assets/JS/question.js"></script>

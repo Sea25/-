@@ -1,24 +1,37 @@
-document.getElementById("moodForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+const moods = document.querySelectorAll('.mood-card');
+const recommendationSection = document.getElementById('recommendation-section');
+let selectedMood = null;
 
-    const selectedMood = document.querySelector('input[name="mood"]:checked').value;
+// Opposite mood mapping
+const oppositeMoods = {
+    happy: "sad",
+    sad: "😄happy",
+    excited: "lazy",
+    angry: "romantic",
+    romantic: "angry",
+    bored: "motivated",
+    stressed: "nostalgic",
+    motivated: "lazy",
+    nostalgic: "excited",
+    lazy: "motivated"
+};
 
-    let choice = confirm("Do you want a SONG recommendation? (Cancel for BOOK)");
+// Mood click
+moods.forEach(card => {
+    card.addEventListener('click', () => {
+        selectedMood = card.dataset.mood;
+        recommendationSection.classList.remove('hidden');
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+});
 
-    // Opposite mood logic
-    let oppositeMoods = {
-        happy: "sad",
-        sad: "happy",
-        angry: "calm"
-    };
+// Buttons
+document.getElementById('book-btn').addEventListener('click', () => {
+    const opposite = oppositeMoods[selectedMood];
+    window.open(`https://www.amazon.in/s?k=${opposite}+books`, '_blank');
+});
 
-    let finalMood = oppositeMoods[selectedMood] || selectedMood;
-
-    if (choice) {
-        // Song → Spotify search
-        window.location.href = `https://open.spotify.com/search/${finalMood} song`;
-    } else {
-        // Book → Amazon search
-        window.location.href = `https://www.amazon.in/s?k=${finalMood}+book`;
-    }
+document.getElementById('song-btn').addEventListener('click', () => {
+    const opposite = oppositeMoods[selectedMood];
+    window.open(`https://open.spotify.com/search/${opposite}%20songs`, '_blank');
 });
