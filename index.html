@@ -1,28 +1,129 @@
-<!DOCTYPE html>
+
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bookworm | Welcome</title>
-<link rel="stylesheet" href="assets/css/home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>പുസ്തകപ്പുഴു | Bookworm</title>
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="title">പുസ്തകപ്പുഴു</h1>
+            <p class="subtitle">Your mood-based book & music companion</p>
+            
+            <!-- Added Start Button -->
+            <a href="#mood-selector" class="start-button">
+                Begin Your Journey
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            
+            <div class="scroll-hint">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>പുസ്തകപ്പുഴു</h1>
-        <p>Discover the perfect book + music for your mood</p>
-        <a href="home.html" class="start-btn">Start</a>
-    </div>
-</section>
+    <!-- About Section -->
+    <section class="about" id="mood-selector">
+        <div class="container">
+            <h2><i class="fas fa-lightbulb"></i> Project Concept</h2>
+            <p class="highlight-box">An interactive platform that recommends a perfect song and matching book based on your current mood — making reading more immersive and enjoyable.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-question"></i></div>
+                    <h3>Problem</h3>
+                    <p>Many want to read but don't know where to start. Reading mood can be enhanced with the right background vibe.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>Solution</h3>
+                    <p>We analyze your mood, suggest a matching song, and recommend a book with matching vibe in a fun, dramatic reveal!</p>
+                </div>
+            </div>
 
-<!-- About Section -->
-<section class="about">
-    <h2>About the Project</h2>
-    <p>Bookworm matches your mood to curated books and songs, creating the perfect vibe for reading. Whether you're feeling calm, energetic, or somewhere in between, we have a recommendation ready for you!</p>
-    <p>Our mission is to make reading a more immersive and personalized experience.</p>
-</section>
+            <h2><i class="fas fa-star"></i> Key Features</h2>
+            <ul class="feature-list">
+                <li><i class="fas fa-smile"></i> <strong>Mood Detection:</strong> Simple emoji/slider questionnaire</li>
+                <li><i class="fas fa-music"></i> <strong>Song Matching:</strong> Spotify/YouTube song recommendations</li>
+                <li><i class="fas fa-book"></i> <strong>Book Pairing:</strong> Curated books matching your vibe</li>
+                <li><i class="fas fa-magic"></i> <strong>Thematic Reveal:</strong> Animated mood-matched presentation</li>
+            </ul>
 
+            <div class="mood-examples">
+                <h3>Example Mood Matches:</h3>
+                <div class="mood-grid">
+                    <div class="mood-card" style="background-color: #A7C7E7;">
+                        <div class="mood-emoji">😌</div>
+                        <h4>Calm</h4>
+                        <p>"River Flows in You" + The Alchemist</p>
+                    </div>
+                    <div class="mood-card" style="background-color: #FFD1DC;">
+                        <div class="mood-emoji">🔥</div>
+                        <h4>Energetic</h4>
+                        <p>"Happy" + Ready Player One</p>
+                    </div>
+                    <div class="mood-card" style="background-color: #D8BFD8;">
+                        <div class="mood-emoji">🌙</div>
+                        <h4>Melancholy</h4>
+                        <p>"Hallelujah" + The Bell Jar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this CSS either in your home.css or as style tag -->
+    <style>
+        .start-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .start-button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .start-button i {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .start-button:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Pulse animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .start-button {
+            animation: pulse 2s infinite;
+        }
+    </style>
 </body>
 </html>
