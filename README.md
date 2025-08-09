@@ -5,11 +5,11 @@
 പുസ്തകപ്പുഴു
 
 ## Basic Details
-### Team Name: [BOTBUSTERS]
+### Team Name: [BotBusters]
 
 
 ### Team Members
-- Team Lead: [SONA ELIZABATH ABRAHAM] - [CUSAT]
+- Team Lead: [SONA ELIZABETH ABRAHAM] - [CUSAT]
 - Member 2: [SIVA NANDA C P] - [CUSAT]
 
 
@@ -31,15 +31,15 @@ For Software:
 - [html,css,js]
 
 For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- [none]
+- [none]
+- [none]
 
 ### Implementation
 
 # Installation
 [For Software:# Clone the repository
-git clone https://github.com/username/book-recommendation.git
+git clone https://github.com/Sea25/-.git
 
 # Navigate into the project folder
 cd book-recommendation]
