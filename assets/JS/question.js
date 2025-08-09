@@ -79,16 +79,16 @@ const songRecommendations = {
 // Book recommendations for opposite moods (verified Amazon links)
 const bookRecommendations = {
     happy: {
-        url: "https://www.amazon.com/dp/0143127748", // The Fault in Our Stars
-        title: "The Fault in Our Stars",
-        author: "John Green",
-        reason: "Poignant story to balance happiness"
-    },
-    sad: {
-        url: "https://www.amazon.com/dp/198482015X", // The Happiness Project
+        url: "https://www.amazon.com/dp/198482015X", // The Fault in Our Stars
         title: "The Happiness Project",
         author: "Gretchen Rubin",
         reason: "Guide to cultivating happiness"
+    },
+    sad: {
+        url: "https://www.amazon.com/dp/0143127748", // The Happiness Project
+        title: "The Fault in Our Stars",
+        author: "John Green",
+        reason: "Poignant story to balance happiness"
     },
     romantic: {
         url: "https://www.amazon.com/dp/0593189647", // Atomic Habits
